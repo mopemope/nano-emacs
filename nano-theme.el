@@ -52,7 +52,7 @@ Defaults to nil."
                           :box        'unspecified :inherit    style)
     (message "NANO Warning: Face %s could not be set. It may not be defined."
              face)))
-  
+
 
 
 (defun nano-theme--basics ()
@@ -166,7 +166,7 @@ Defaults to nil."
                       :overline nil
                       :inherit nil
                       :box nil)
-  
+
   ;;(when (display-graphic-p)
   (set-face-attribute 'header-line nil
                        :weight 'light
@@ -463,7 +463,7 @@ function is a convenience wrapper used by `describe-package-1'."
   (with-eval-after-load 'org
     (set-face 'org-archived                            'nano-face-faded)
 
-    (set-face 'org-block                                       'hl-line)
+    (set-face 'org-block                               'nano-face-subtle)
     (set-face 'org-block-begin-line                    'nano-face-faded)
     (set-face 'org-block-end-line                      'nano-face-faded)
     (unless (version< emacs-version "27.0")
@@ -736,19 +736,19 @@ function is a convenience wrapper used by `describe-package-1'."
   (with-eval-after-load 'company
     (set-face 'company-tooltip-selection                   '(nano-face-strong nano-face-subtle))
     (set-face-attribute 'company-tooltip-selection nil :background nano-color-popout)
-    
+
     (set-face 'company-tooltip                                               'nano-face-subtle)
 
     (set-face 'company-scrollbar-fg                                          'nano-face-faded)
     (set-face-attribute 'company-scrollbar-fg nil :background nano-color-foreground)
-    
+
     (set-face 'company-scrollbar-bg                                          'nano-face-default)
     (set-face-attribute 'company-scrollbar-bg nil :background nano-color-faded)
 
     (set-face 'company-tooltip-common                                        'nano-face-faded)
     (set-face 'company-tooltip-common-selection            '(nano-face-strong nano-face-subtle))
     (set-face-attribute 'company-tooltip-common-selection nil :background nano-color-popout)
-    
+
     (set-face 'company-tooltip-annotation                                    'nano-face-default)
     (set-face 'company-tooltip-annotation-selection        '(nano-face-strong nano-face-subtle))))
 
